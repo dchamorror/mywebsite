@@ -7,6 +7,16 @@ baseURL = "https://dchamorror.github.io/mywebsite/"
 # defaultContentLanguage = "en"
 languageCode = "en"
 
+[languages.en.params]
+rtl = false
+dateformat = "2006-01-02"
+isocode = "en"
+logo = "logo.png"
+displayname = "English"
+
+[params]
+showAppearanceSwitcher = true
+
 # pluralizeListTitles = "true" # hugo function useful for non-english languages, find out more in  https://gohugo.io/getting-started/configuration/#pluralizelisttitles
 
 enableRobotsTXT = true
