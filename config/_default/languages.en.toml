@@ -1,0 +1,64 @@
+languageCode = "en"
+languageName = "English"
+displayName = "EN"
+isoCode = "en"
+weight = 1
+rtl = false
+
+title = "Danilo Chamorro"
+logo = "icontop.png"
+# description = "My awesome website"
+# copyright = "Copy, _right?_ :thinking_face:"
+
+dateFormat = "2 January 2006"
+
+[author]
+name = "Hi, I'm Danilo"
+image = "icon.jpg"  
+headline = "Geosciences | Machine Learning"
+ocup = "MSc in Earth Sciences and Engineering @ KAUST"
+bio = "As a geophysicist, I use machine learning to solve **near-surface challenges**. From analyzing seismic data to modeling subsurface structures, I strive to uncover the earth's mysteries and find solutions to environmental problems. My passion for innovative research and commitment to scientific excellence drive me to advance the field of geophysics through hard work and creative thinking."
+links = [
+     { email = "mailto:danilochamorro11@gmail.com" },
+#     { link = "https://link-to-some-website.com/" },
+#     { amazon = "https://www.amazon.com/hz/wishlist/ls/wishlist-id" },
+#     { apple = "https://www.apple.com" },
+#     { blogger = "https://username.blogspot.com/" },
+#     { codepen = "https://codepen.io/username" },
+#     { dev = "https://dev.to/username" },
+#     { discord = "https://discord.gg/invitecode" },
+#     { dribbble = "https://dribbble.com/username" },
+#     { facebook = "https://facebook.com/username" },
+#     { flickr = "https://www.flickr.com/photos/username/" },
+#     { foursquare = "https://foursquare.com/username" },
+     { github = "https://github.com/dchamorror" },
+#     { gitlab = "https://gitlab.com/username" },
+#     { google = "https://www.google.com/" },
+#     { hashnode = "https://username.hashnode.dev" },
+     { instagram = "https://instagram.com/daniloc9_" },
+#     { keybase = "https://keybase.io/username" },
+#     { kickstarter = "https://www.kickstarter.com/profile/username" },
+#     { lastfm = "https://lastfm.com/user/username" },
+     { linkedin = "https://linkedin.com/in/danilo-chamorro" },
+#     { mastodon = "https://mastodon.instance/@username" },
+#     { medium = "https://medium.com/username" },
+#     { microsoft = "https://www.microsoft.com/" },
+#     { orcid = "https://orcid.org/userid" },
+#     { patreon = "https://www.patreon.com/username" },
+#     { pinterest = "https://pinterest.com/username" },
+#     { reddit = "https://reddit.com/user/username" },
+#     { researchgate = "https://www.researchgate.net/profile/username" },
+#     { slack = "https://workspace.url/team/userid" },
+#     { snapchat = "https://snapchat.com/add/username" },
+#     { soundcloud = "https://soundcloud.com/username" },
+#     { stack-overflow = "https://stackoverflow.com/users/userid/username" },
+#     { steam = "https://steamcommunity.com/profiles/userid" },
+#     { telegram = "https://t.me/username" },
+#     { tiktok = "https://tiktok.com/@username" },
+#     { tumblr = "https://username.tumblr.com" },
+#     { twitch = "https://twitch.tv/username" },
+#     { twitter = "https://twitter.com/username" },
+     { whatsapp = "https://wa.me/+573014416418" },
+#     { youtube = "https://youtube.com/username" },
+#     { ko-fi = "https://ko-fi.com/username" },
+   ]

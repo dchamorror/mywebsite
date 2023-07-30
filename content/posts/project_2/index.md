@@ -1,0 +1,12 @@
+---
+title: "RMS velocity prediction from CMP gathers using deep-learning"
+date: 2023-05-12
+---
+
+Seismic data processing is a critical step in hydrocarbon exploration, where the goal is to create accurate images of the subsurface to identify potential oil and gas reservoirs. One of the key challenges in this process is the Normal Moveout (NMO) correction, which involves estimating the velocity of the subsurface layers to correct for the travel time of the seismic waves. Traditional methods for NMO correction rely on manual interpretation of seismic data and constructing velocity models based on prior geological knowledge. However, these methods can be time-consuming and challenging to construct accurate velocity models in complex geological settings.
+
+To address these challenges, we propose a novel approach using Convolutional Neural Networks (CNN) to learn the direct mapping from Common Midpoint (CMP) gathers to Root Mean Squared (RMS) and interval velocity curves. Our proposed methodology consists of several steps, starting from the generation of 1D interval velocity models based on prior geological knowledge, followed by the numerical modeling of CMP gathers using convolutional modeling. Uncertainty quantification is performed using Distributional Parameter Estimation, and an Explainable AI (XAI) technique is employed to gain deeper insight into the network’s learning process.
+
+We conducted experiments using synthetic data to evaluate the performance of our proposed approach. After careful experimentation with different parameters, we selected the model-v6, which exhibited superior performance compared to other iterations. Our results show that the predicted VRMS values closely align with the corresponding labels, and the model captures essential features and exhibits robustness against noise present in the synthetic dataset. These insights provide valuable guidance for optimizing the MLVelocity model and improving its accuracy and efficiency.
+
+In conclusion, our proposed approach using CNN for NMO correction shows promising results in improving the accuracy and efficiency of seismic data processing. This approach has the potential to reduce the time and cost of hydrocarbon exploration and enable more accurate identification of potential oil and gas reservoirs. We hope that our work will inspire further research in this area and contribute to the development of more advanced techniques for seismic data processing.

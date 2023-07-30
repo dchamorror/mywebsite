@@ -1,0 +1,10 @@
+[
+    {
+        "icon": "path/to/icon.jpg",
+        "description": "This is a short description of Skill 1."
+    },
+    {
+        "icon": "path/to/icon.jpg",
+        "description": "This is a short description of Skill 2."
+    }
+]
