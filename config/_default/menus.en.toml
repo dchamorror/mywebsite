@@ -27,7 +27,6 @@
   url = "/cv_en.pdf"
   weight = 30
 
-
 #[[main]]
 #  name = "example sub-menu 1"
 #  parent = "Parent"
