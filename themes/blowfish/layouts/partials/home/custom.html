@@ -1,0 +1,20 @@
+<article class="max-w-full prose dark:prose-invert">
+    <div class="relative hero-container">
+        <div class="absolute inset-x-0 bottom-0 h-1/2 bg-gray-100"></div>
+        <div class="mx-auto max-w-7xl p-0">
+            <div class="relative shadow-xl sm:overflow-hidden rounded-2xl hero-card">
+                <div class="absolute inset-0 hero-background">
+                    {{ $homepageImage := "" }}
+                    {{ with .Site.Params.defaultBackgroundImage }}{{ $homepageImage = resources.Get . }}{{ end }}
+                    {{ with .Site.Params.homepage.homepageImage }}{{ $homepageImage = resources.Get . }}{{ end }}
+                    {{ if $homepageImage }}
+                    <img class="h-full w-full object-cover m-0 nozoom hero-image" src="{{ $homepageImage.RelPermalink }}">
+                    <div class="absolute inset-0 bg-gradient-to-r from-primary-500 to-secondary-700 dark:from-primary-600 dark:to-secondary-800 mix-blend-multiply hero-overlay">
+                    </div>
+                    {{ end }}
+                </div>
+                <!-- Rest of your content -->
+            </div>
+        </div>
+    </div>
+</article>

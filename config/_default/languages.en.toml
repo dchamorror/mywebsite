@@ -15,9 +15,9 @@ dateFormat = "2 January 2006"
 [author]
 name = "Hi, I'm Danilo"
 image = "icon.jpg"  
-headline = "Geosciences | Machine Learning"
+headline = "Data Analysis | Machine Learning"
 ocup = "MSc in Earth Sciences and Engineering @ KAUST"
-bio = "As a geophysicist, I use machine learning to solve **near-surface challenges**. From analyzing seismic data to modeling subsurface structures, I strive to uncover the earth's mysteries and find solutions to environmental problems. My passion for innovative research and commitment to scientific excellence drive me to advance the field of geophysics through hard work and creative thinking."
+bio = "I am a highly responsible data professional with advanced analytical skills in **machine learning, data analytics, and statistical modeling**, built on a strong academic foundation in **geosciences and engineering**. With expertise in Python, SQL, and data visualization, I transform complex datasets into actionable insights and dynamic dashboards. My experience spans feature engineering, time-series analysis, and developing data-driven solutions across diverse fields. Skilled in team collaboration and presenting clear narratives, I am passionate about leveraging data to optimize workflows and drive impactful decision-making."
 links = [
      { email = "mailto:danilochamorro11@gmail.com" },
 #     { link = "https://link-to-some-website.com/" },

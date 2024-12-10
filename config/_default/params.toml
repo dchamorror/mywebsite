@@ -34,8 +34,8 @@ defaultBackgroundImage = "bck2.jpg" # used as default for background images
   showScrollToTop = true
 
 [homepage]
-  layout = "background_mod" # valid options: page, profile, hero, card, background, custom
-  homepageImage = "bck5.jpg" # used in: hero, and card
+  layout = "hero" # valid options: page, profile, hero, card, background, custom
+  homepageImage = "bck3.jpg" # used in: hero, and card
   showRecent = true
   showRecentItems = 5
   showMoreLink = true
