@@ -1,20 +1,126 @@
-<article class="max-w-full prose dark:prose-invert">
-    <div class="relative hero-container">
+<article class="max-w-full prose dark:prose-invert bg-gradient-to-r from-blue-500 via-blue-500 to-indigo-500">
+    <div class="relative">
         <div class="absolute inset-x-0 bottom-0 h-1/2 bg-gray-100"></div>
         <div class="mx-auto max-w-7xl p-0">
-            <div class="relative shadow-xl sm:overflow-hidden rounded-2xl hero-card">
-                <div class="absolute inset-0 hero-background">
+            <div class="relative shadow-xl sm:overflow-hidden rounded-2xl">
+                <div class="absolute inset-0">
                     {{ $homepageImage := "" }}
                     {{ with .Site.Params.defaultBackgroundImage }}{{ $homepageImage = resources.Get . }}{{ end }}
                     {{ with .Site.Params.homepage.homepageImage }}{{ $homepageImage = resources.Get . }}{{ end }}
                     {{ if $homepageImage }}
-                    <img class="h-full w-full object-cover m-0 nozoom hero-image" src="{{ $homepageImage.RelPermalink }}">
-                    <div class="absolute inset-0 bg-gradient-to-r from-primary-500 to-secondary-700 dark:from-primary-600 dark:to-secondary-800 mix-blend-multiply hero-overlay">
+                    <img class="h-full w-full object-cover m-0 nozoom" src="{{ $homepageImage.RelPermalink }}">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-r from-primary-500 to-secondary-700 dark:from-primary-600 dark:to-secondary-800 mix-blend-multiply">
                     </div>
                     {{ end }}
                 </div>
-                <!-- Rest of your content -->
+                <div class="relative px-4 py-16 sm:px-6 sm:py-24 lg:py-32 lg:px-8 flex flex-col items-center justify-center text-center">
+                    {{ with .Site.Author.image }}
+                    {{ $authorImage := resources.Get . }}
+                    {{ if $authorImage }}
+                    {{ $authorImage := $authorImage.Fill "288x288" }}
+                    <img class="mb-2 rounded-full h-36 w-36" width="144" height="144"
+                        alt="{{ $.Site.Author.name | default " Author" }}" src="{{ $authorImage.RelPermalink }}" />
+                    {{ end }}
+                    {{ end }}
+                    <h1 class="mb-2 text-4xl font-extrabold text-neutral-200">
+                        {{ .Site.Author.name | default .Site.Title }}
+                    </h1>
+                    
+                    {{ with .Site.Author.headline }}
+                    
+                    <h2 class="mt-0 mb-0 text-xl text-neutral-300">
+                        {{ . | markdownify | emojify }}
+                    </h2>
+                    {{ end }}
+                    {{ with .Site.Author.bio }}
+                    <p class="mt-5 mb-0 text text-neutral-300">
+                        {{ . | markdownify | emojify }}
+                    </p>
+                    {{ end }}
+                    <div class="mt-1 mb-10 text-2xl">
+                        {{ with .Site.Author.links }}
+                        <div class="flex flex-wrap">
+                            {{ range $links := . }}
+                            {{ range $name, $url := $links }}
+                            <a class="px-2 py-2 hover:text-primary-400 text-primary-300" href="{{ $url }}" target="_blank"
+                                aria-label="{{ $name | title }}" rel="me noopener noreferrer">{{ partial
+                                "icon.html" $name }}</a>
+                            {{ end }}
+                            {{ end }}
+                        </div>
+                        {{ end }}
+                    </div>
+                    <section class="prose dark:prose-invert">{{ .Content | emojify }}</section>
+                </div>
             </div>
         </div>
     </div>
 </article>
+
+<!-- About Me section with responsive side-by-side layout -->
+<section class="max-w-lg mx-auto py-16">
+    <h2 class="text-2xl font-bold mb-8 py-1">About Me</h2>
+    <div class="flex py-4 flex-col sm:flex-row items-start gap-4"> <!-- Added flex-col for small screens -->
+        <div class="md:w-2/3"> <!-- md: prefix ensures layout applies only on medium screens and up -->
+            <p class="text-lg">
+                {{ .Site.Params.about.description | markdownify }}
+            </p>
+        </div>
+        <div class="sm:w-1/4 flex justify-center md:shrink-0"> <!-- Prevents shrinking on medium screens and larger -->
+            {{ with .Site.Params.about.image }}
+            {{ $aboutImage := resources.Get . }}
+            {{ if $aboutImage }}
+            <img class="rounded-lg shadow-lg w-full object-cover md:h-full md:w-48" src="{{ $aboutImage.RelPermalink }}" alt="About Me">
+            {{ end }}
+            {{ end }}
+        </div>
+    </div>
+</section>
+
+
+<section class="px-4 py-1 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-8"></section>
+    <!-- Section Header -->
+    <div class="mb-10 md:mx-auto text-left lg:max-w-2xl md:mb-12">
+        <h2 class="text-2xl font-bold mb-8 py-1">My skills</h2>
+    </div>
+
+    <!-- Skills Grid -->
+    <div class="grid max-w-md gap-8 row-gap-10 sm:mx-auto lg:max-w-full md:grid-cols-3">
+        {{ range .Site.Params.skills.categories }}
+        <div class="flex flex-col sm:flex-row">
+
+            <!-- Icon Container -->
+            <div class="sm:mr-4">
+                <div class="flex items-center justify-center w-16 h-16 mb-4 rounded-full bg-gray-800">
+                    {{ .icon | safeHTML }}
+                </div>
+            </div>
+
+            <!-- Content Container -->
+            <div>
+                <h6 class="mb-2 px-2 text-xl font-semibold leading-5 text-white">{{ .name }}</h6>
+                <ul class="mb-4 py-4 space-y-2">
+                    {{ range .items }}
+                    <li class="flex items-start text-gray-300">
+                        <span class="py-1 mr-1">
+                            <svg class="w-5 h-5 mt-px text-blue-500" stroke="currentColor" viewBox="0 0 52 52">
+                                <polygon stroke-width="4" stroke-linecap="round" stroke-linejoin="round" fill="none" points="29 13 14 29 25 29 23 39 38 23 27 23"></polygon>
+                            </svg>
+                        </span>
+                        {{ . }}
+                    </li>
+                    {{ end }}
+                </ul>
+            </div>
+        </div>
+        {{ end }}
+    </div>
+</section>
+
+
+<section>
+    {{ partial "recent-articles/main.html" . }}
+</section>
+
+
